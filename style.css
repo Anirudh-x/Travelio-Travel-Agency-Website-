@@ -139,8 +139,6 @@ button:hover {
   opacity: 1;
 }
 
-/* Media Queries for responsiveness */
-
 @media (min-width: 768px) {
   .info h1 {
     font-size: 50px;
@@ -198,8 +196,8 @@ button:hover {
 }
 
 .auth-buttons button {
-  width: 100px; /* Set a fixed width */
-  transition: filter 0.3s ease; /* Add transition for smooth hover effect */
+  width: 100px;
+  transition: filter 0.3s ease;
 }
 
 .auth-buttons button:hover {
