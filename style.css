@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/bg1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.navbar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar .logo {
+  width: 100px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 15px;
+  background: transparent;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+
+button:hover {
+  filter: invert(1);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgba(86, 86, 86, 0.3);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.info {
+  width: 90%;
+  max-width: 550px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+
+.info h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.info p {
+  color: #f0eef1;
+  font-size: 14px;
+  margin: 20px 0;
+  line-height: 20px;
+}
+
+.info input {
+  width: 80%;
+  padding: 8px 10px;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px; 
+}
+
+::placeholder{
+  color: #ccc;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+#prev, #next {
+  width: 20px;
+  cursor: pointer;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.preview img {
+  width: 40px;
+  margin: 0 5px;
+  opacity: 0.4;
+}
+
+.preview .active {
+  display: block;
+  border: 3px solid #fff;
+  width: 60px;
+  opacity: 1;
+}
+
+/* Media Queries for responsiveness */
+
+@media (min-width: 768px) {
+  .info h1 {
+    font-size: 50px;
+    letter-spacing: 8px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .preview img {
+    width: 50px;
+  }
+
+  .preview .active {
+    width: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+
+  .info {
+    width: 550px;
+  }
+
+  .info h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+  }
+
+  .info p {
+    font-size: 18px;
+  }
+
+  .preview img {
+    width: 60px;
+  }
+
+  .preview .active {
+    width: 100px;
+  }
+}
+
+
+.auth-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  width: 100px; /* Set a fixed width */
+  transition: filter 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.auth-buttons button:hover {
+  filter: invert(1); /* Invert button appearance on hover */
+}
