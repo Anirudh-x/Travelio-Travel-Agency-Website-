@@ -54,7 +54,6 @@ button {
   transition: filter 0.3s ease;
 }
 
-
 button:hover {
   filter: invert(1);
 }
@@ -81,15 +80,15 @@ button:hover {
 }
 
 .info h1 {
-  font-size: 40px;
-  letter-spacing: 5px;
+  font-size: 2.5em;
+  letter-spacing: 0.2em;
 }
 
 .info p {
   color: #f0eef1;
-  font-size: 14px;
+  font-size: 1em;
   margin: 20px 0;
-  line-height: 20px;
+  line-height: 1.5em;
 }
 
 .info input {
@@ -100,19 +99,20 @@ button:hover {
   border-radius: 20px;
   background: transparent;
   color: #fff;
-  font-size: 12px; 
+  font-size: 1em; 
 }
 
-::placeholder{
+::placeholder {
   color: #ccc;
 }
 
 .slider {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
   right: 10px;
-  bottom: 20px;
+  bottom: 80px;
 }
 
 #prev, #next {
@@ -120,15 +120,25 @@ button:hover {
   cursor: pointer;
 }
 
+#prev {
+  position: absolute;
+  left: 10px;
+}
+
+#next {
+  position: absolute;
+  right: 10px;
+}
+
 .preview {
   display: flex;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 40px;
 }
 
 .preview img {
   width: 40px;
-  margin: 0 5px;
+  margin: 0 2px;
   opacity: 0.4;
 }
 
@@ -139,14 +149,33 @@ button:hover {
   opacity: 1;
 }
 
+.auth-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  width: 100px; /* Set a fixed width */
+  transition: filter 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.auth-buttons button:hover {
+  filter: invert(1); /* Invert button appearance on hover */
+}
+
+/* Media Queries for responsiveness */
 @media (min-width: 768px) {
   .info h1 {
-    font-size: 50px;
-    letter-spacing: 8px;
+    font-size: 3.5em;
+    letter-spacing: 0.3em;
   }
 
   .info p {
-    font-size: 16px;
+    font-size: 1.1em;
   }
 
   .preview img {
@@ -168,12 +197,12 @@ button:hover {
   }
 
   .info h1 {
-    font-size: 60px;
-    letter-spacing: 10px;
+    font-size: 4.5em;
+    letter-spacing: 0.2em;
   }
 
   .info p {
-    font-size: 18px;
+    font-size: 1.2em;
   }
 
   .preview img {
@@ -183,23 +212,4 @@ button:hover {
   .preview .active {
     width: 100px;
   }
-}
-
-
-.auth-buttons {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.auth-buttons button {
-  width: 100px;
-  transition: filter 0.3s ease;
-}
-
-.auth-buttons button:hover {
-  filter: invert(1); /* Invert button appearance on hover */
 }
