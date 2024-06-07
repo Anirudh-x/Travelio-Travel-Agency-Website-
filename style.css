@@ -22,6 +22,8 @@
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  height: 10%;
+  padding-top: 20px;
 }
 
 .navbar .logo {
@@ -41,7 +43,7 @@
   cursor: pointer;
 }
 
-button {
+.landing-page-button {
   padding: 8px 15px;
   background: transparent;
   outline: none;
@@ -54,7 +56,7 @@ button {
   transition: filter 0.3s ease;
 }
 
-button:hover {
+.landing-page-button:hover {
   filter: invert(1);
 }
 
@@ -91,7 +93,7 @@ button:hover {
   line-height: 1.5em;
 }
 
-.info input {
+.info .landing-page-input {
   width: 80%;
   padding: 8px 10px;
   outline: none;
@@ -112,7 +114,7 @@ button:hover {
   justify-content: center;
   position: absolute;
   right: 10px;
-  bottom: 80px;
+  bottom: 60px;
 }
 
 #prev, #next {
@@ -158,12 +160,12 @@ button:hover {
   gap: 10px;
 }
 
-.auth-buttons button {
+.auth-buttons .landing-page-button {
   width: 100px; /* Set a fixed width */
   transition: filter 0.3s ease; /* Add transition for smooth hover effect */
 }
 
-.auth-buttons button:hover {
+.auth-buttons .landing-page-button:hover {
   filter: invert(1); /* Invert button appearance on hover */
 }
 
@@ -212,4 +214,102 @@ button:hover {
   .preview .active {
     width: 100px;
   }
+}
+
+
+
+
+
+form{
+  height: 520px;
+  width: 400px;
+  background-color: rgba(86,86,86,0.3);
+  position: absolute;
+  transform: translate(50%,-55%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(86,86,86,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+}
+
+form .close-button {
+  position: absolute;
+  transform: translate(330px, -40px);
+  color: rgba(86,86,86);
+  font-weight: bold;
+  font-size: 18px;
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+}
+
+form *{
+  font-family: 'Poppins',sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: center;
+}
+
+label{
+  display: block;
+  margin-top: 26px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.sign-page-input{
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+::placeholder{
+  color: #e5e5e5;
+}
+.sign-page-button{
+  margin-top: 30px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.social{
+  margin-top: 10px;
+  display: flex;
+}
+.social div{
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 5px 10px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
 }
